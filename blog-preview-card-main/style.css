@@ -1,0 +1,110 @@
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+
+  --size-title: 24px;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("assets/fonts/static/Figtree-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("assets/fonts/static/Figtree-ExtraBold.ttf");
+  font-style: normal;
+  font-weight: 800;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+body {
+  background: var(--yellow);
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: 320px;
+
+  border: 2px solid var(--black);
+  box-shadow: 10px 10px var(--black);
+}
+
+.background-header {
+  width: 100%;
+  border-radius: 15px;
+}
+
+h3 {
+  color: var(--black);
+}
+
+button {
+  background: var(--yellow);
+  border: none;
+  padding: 0.5rem 1.3rem;
+  border-radius: 5px;
+  font-weight: 800;
+  color: var(--black);
+  width: fit-content;
+  cursor: pointer;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: var(--size-title);
+  color: var(--black);
+}
+
+h1:hover {
+  color: var(--yellow);
+}
+
+p {
+  color: var(--grey);
+}
+
+.footer-profile {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.profile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+}
+
+span {
+  font-weight: 800;
+  color: var(--black);
+}
