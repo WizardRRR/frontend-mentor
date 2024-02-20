@@ -1,0 +1,58 @@
+:root {
+  /* primary colors */
+  --Nutmeg: hsl(14, 45%, 36%);
+  --DarkRaspberry: hsl(332, 51%, 32%);
+
+  /* neutral colors */
+  --White: hsl(0, 0%, 100%);
+  --Rose: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --LightGrey: hsl(30, 18%, 87%);
+  --WengeBrown: hsl(30, 10%, 34%);
+  --DarkCharcoal: hsl(24, 5%, 18%);
+
+  /* fonts */
+  --primary-font: "Young Serif";
+  --secundary-font: "Outfit";
+
+  /* typography */
+  --font-base: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 16px; /* tamaño de parrafo */
+  font-weight: inherit; /* resetear grosor de fuente*/
+  font-family: var(--secundary-font);
+  color: var(--WengeBrown);
+  font-weight: var(--base);
+  line-height: 1.5;
+}
+
+ol,
+li {
+  list-style: none;
+}
+
+.circle {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.darkRaspberry {
+  background: var(--DarkRaspberry);
+}
+
+.nutmeg {
+  background: var(--Nutmeg);
+}

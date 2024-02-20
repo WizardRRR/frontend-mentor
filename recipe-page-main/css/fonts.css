@@ -1,0 +1,34 @@
+/* Young Serif  */
+
+/* Regular */
+@font-face {
+  font-family: "Young Serif";
+  src: url("./../assets/fonts/young-serif/YoungSerif-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Outfit */
+
+/* Regular */
+@font-face {
+  font-family: "Outfit";
+  src: url("./../assets/fonts/outfit/static/Outfit-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+/*  Semibold */
+@font-face {
+  font-family: "Outfit";
+  src: url("./../assets/fonts/outfit/static/Outfit-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+/*  Bold */
+@font-face {
+  font-family: "Outfit";
+  src: url("./../assets/fonts/outfit/static/Outfit-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
