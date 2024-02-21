@@ -1,0 +1,45 @@
+:root {
+  /* COLORS */
+
+  /* primary */
+  --LightRed: hsl(0, 100%, 67%);
+  --OrangeyYellow: hsl(39, 100%, 56%);
+  --GreenTeal: hsl(166, 100%, 37%);
+  --CobaltBlue: hsl(234, 85%, 45%);
+
+  /* neutral */
+  --White: hsl(0, 0%, 100%);
+  --PaleBlue: hsl(221, 100%, 96%);
+  --LightLavender: hsl(241, 100%, 89%);
+  --DarkGrayBlue: hsl(224, 30%, 27%);
+
+  /* GRADIENTS */
+  /* background */
+  --LightSlateBlue: hsl(252, 100%, 67%);
+  --LightRoyalBlue: hsl(241, 81%, 54%);
+  /* circle */
+  --VioletBlue: hsla(256, 72%, 46%, 1);
+  --PersianBlue: hsla(241, 72%, 46%, 0);
+
+  /* font typography */
+  --medium-font: 500;
+  --bold-font: 700;
+  --extrabold-font: 800;
+
+  /* font size */
+  --base-font: 18px;
+
+  /* family font */
+  --primary-font: "Hanken Grotesk";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-weight: var(--medium-font);
+  font-size: var(--base-font);
+}
