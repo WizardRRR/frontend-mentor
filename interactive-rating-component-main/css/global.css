@@ -1,0 +1,52 @@
+@import url("form-rating.css");
+@import url("thank-state.css");
+
+:root {
+  /* Primary */
+  --orange: hsl(25, 97%, 53%);
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --MediumGrey: hsl(210, 19%, 18%);
+  --DarkBlue: hsl(215, 20%, 16%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+
+  /* font family */
+  --primary-font: "Overpass";
+  /* font sizes */
+  --base-font: 14px;
+  --xl-font: 26px;
+  /* font weights */
+  --regular-font: 400;
+  --bold-font: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+
+  font-size: var(--base-font);
+  font-weight: var(--regular-font);
+  font-family: var(--primary-font);
+  color: var(--White);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  background: var(--VeryDarkBlue);
+
+  margin: 0rem 1.5rem;
+}
+
+@media (min-width: 767px) {
+  .body {
+    margin: 0;
+  }
+}

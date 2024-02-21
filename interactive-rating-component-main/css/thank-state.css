@@ -1,0 +1,47 @@
+.card-thanks {
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--DarkBlue);
+  padding: 2rem;
+  max-width: 400px;
+  border-radius: 1rem;
+
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card-thanks img {
+  align-self: center;
+}
+
+.card-thanks p:nth-of-type(1) {
+  padding: 0.5rem 1rem;
+  background: var(--MediumGrey);
+  color: var(--orange);
+  border-radius: 1rem;
+  align-self: center;
+}
+
+.card-thanks p:nth-of-type(1) span {
+  color: var(--orange);
+}
+
+.card-thanks h2 {
+  font-size: var(--xl-font);
+  align-self: center;
+}
+
+.card-thanks p:nth-of-type(2) {
+  align-self: center;
+  color: var(--LightGrey);
+  text-align: center;
+}
