@@ -1,0 +1,36 @@
+:root {
+  /* colors */
+  --White: hsl(0, 0%, 100%);
+  --Lightpink: hsl(275, 100%, 97%);
+  --Grayishpurple: hsl(292, 16%, 49%);
+  --Darkpurple: hsl(292, 42%, 14%);
+
+  /* fonts */
+  --primary-font: "Work Sans";
+
+  /* font size */
+  --xs-font: 14px;
+  --base-font: 16px;
+  --xl-font: 36px;
+
+  /* font type*/
+  --regular-font: 400;
+  --semibold-font: 600;
+  --bold-font: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-weight: inherit;
+  font-size: var(--base-font);
+  font-family: var(--primary-font);
+}
+
+.top-border {
+  border-top: 1px solid var(--Lightpink);
+}

@@ -1,0 +1,127 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0rem 1.5rem;
+  min-height: 100vh;
+  background: var(--Lightpink);
+  animation: fadeIn 1s ease;
+}
+
+/* header image background */
+.mobile-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.desktop-header {
+  display: none;
+}
+
+/* FAQ */
+.container {
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  max-width: 520px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.09);
+
+  background: var(--White);
+  z-index: 10;
+  animation: swipeUp 0.7s 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes swipeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0vh);
+  }
+}
+
+/* title */
+.container__title-container {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+}
+
+.container__title-container img {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.container__title-container h1 {
+  font-size: var(--xl-font);
+  font-weight: var(--bold-font);
+  color: var(--Darkpurple);
+}
+
+/* accordion */
+.container__accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.container__accordion__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  padding: 1rem 0rem;
+}
+
+.container__accordion__title h3 {
+  color: var(--Darkpurple);
+  font-weight: var(--bold-font);
+}
+
+.container__accordion__title img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.container__accordion__content {
+  overflow: hidden;
+  color: var(--Grayishpurple);
+  font-size: var(--xs-font);
+  height: 0px;
+  opacity: 0;
+}
+
+.container__accordion__content.active {
+  height: auto;
+  opacity: 1;
+}
+
+@media (min-width: 767px) {
+  .mobile-header {
+    display: none;
+  }
+  .desktop-header {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+}
