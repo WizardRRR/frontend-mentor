@@ -1,0 +1,33 @@
+:root {
+  /* COLOR */
+  /* Primary */
+  --DarkCyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  /* neutral */
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  /* font family */
+  --font-primary: "Fraunces";
+  --font-secundary: "Montserrat";
+
+  /* font size */
+  --base-font: 14px;
+  --xl-font: 32px;
+
+  /* font weight */
+  --medium-font: 500;
+  --extrabold-font: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  font-size: var(--base-font);
+  font-weight: var(--medium-font);
+}
