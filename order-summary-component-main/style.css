@@ -1,0 +1,159 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  /* Primary */
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+
+  /* font sizes */
+  --base-font: 14px;
+  --xl-font: 24px;
+
+  /* font weights */
+  --medium-font: 500;
+  --bold-font: 700;
+  --black-font: 900;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: inherit;
+  font-size: var(--base-font);
+  font-family: "Red Hat Display";
+  color: var(--darkBlue);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 1.5rem;
+  background: var(--paleBlue);
+}
+
+.background-mobile {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.background-desktop {
+  display: none;
+}
+
+/* cotainer */
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  box-shadow: 0px 20px 30px -10px hsla(245, 75%, 52%, 0.2);
+  z-index: 10;
+}
+
+/* header content */
+.card__header {
+  overflow: hidden;
+}
+.card__header img {
+  width: 100%;
+  display: block;
+}
+
+/* body content */
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--white);
+  padding: 1.5rem;
+}
+.card__body h1 {
+  font-size: var(--xl-font);
+  font-weight: var(--black-font);
+  text-align: center;
+}
+.card__body p {
+  font-weight: var(--bold-font);
+  color: var(--desaturatedBlue);
+  line-height: 1.7;
+  text-align: center;
+  margin: 0 1.7rem;
+}
+
+.card__body__price {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 1rem 0;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: var(--veryPaleBlue);
+  border-radius: 1rem;
+}
+.card__body__price img {
+  width: 3rem;
+  height: 3rem;
+}
+.card__body__price h3 {
+  font-weight: var(--black-font);
+}
+.card__body__price span {
+  font-weight: var(--bold-font);
+  color: var(--desaturatedBlue);
+}
+.card__body__price a {
+  margin-left: auto;
+  text-decoration: underline;
+  color: var(--brightBlue);
+  font-weight: var(--black-font);
+}
+
+button {
+  border: 0;
+  background: inherit;
+  font-weight: var(--bold-font);
+  padding: 1.2rem;
+  border-radius: 0.7rem;
+}
+
+.buttonPrimary {
+  background: var(--brightBlue);
+  color: var(--veryPaleBlue);
+  z-index: 10;
+  box-shadow: 0px 15px 2rem hsla(224, 23%, 55%, 0.4);
+}
+.buttonSecondary {
+  color: var(--desaturatedBlue);
+}
+
+.card__body__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 767px) {
+  .background-mobile {
+    display: none;
+  }
+
+  .background-desktop {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+}
