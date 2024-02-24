@@ -1,0 +1,68 @@
+/* modal active desktop */
+.modal {
+  position: absolute;
+  display: none;
+  bottom: 5rem;
+}
+.modal__body {
+  display: flex;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  z-index: 20;
+  padding: 1.2rem 3rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+}
+.modal__body > * {
+  z-index: 10;
+}
+.modal__body span {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: var(--grayishBlue);
+}
+.modal__body::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 100%;
+  background: var(--veryDarkGrayishBlue);
+  border-radius: 10px;
+}
+.modal__arrow-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(50%) translateX(-50%) rotate(45deg);
+  width: 0;
+  height: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 13px 13px 13px 13px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.15);
+  background: var(--veryDarkGrayishBlue);
+}
+
+/* state active mobile */
+.card__body__share {
+  display: none; /* control con js*/
+  align-items: center;
+  margin: 1.5rem -2rem -1.5rem -2rem;
+  border-radius: 0rem 0rem 1rem 1rem;
+  background: var(--veryDarkGrayishBlue);
+  color: var(--white);
+  padding: 1rem 2rem;
+}
+.card__body__share span {
+  color: var(--grayishBlue);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+.card__body__share div {
+  display: flex;
+  gap: 1.5rem;
+}
