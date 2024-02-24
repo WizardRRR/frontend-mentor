@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+:root {
+  /* Primary colors */
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+
+  /* neutral colors  */
+  /* (paragraphs) */
+  --white: hsla(0, 0%, 100%, 0.75);
+  /* (background, headings, buttons) */
+  --veryLightGray: hsl(0, 0%, 95%);
+
+  /* font weigths */
+  --font-normal: 400;
+  --font-bold: 700;
+
+  /* font family */
+  --font-primary: "Big Shoulders Display";
+  --font-secondary: "Lexend Deca";
+
+  /* font sizes */
+  --text-base: 15px;
+  --text-3xl: 36px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: var(--font-normal);
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 5rem 1.5rem;
+  background: var(--veryLightGray);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  max-width: 950px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  animation: fadeInSwipe 2s forwards;
+}
+
+@keyframes fadeInSwipe {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  padding: 3.5rem;
+}
+.main__card:nth-of-type(1) {
+  background: var(--brightOrange);
+}
+.main__card:nth-of-type(2) {
+  background: var(--darkCyan);
+}
+.main__card:nth-of-type(3) {
+  background: var(--veryDarkCyan);
+}
+.main__card h3 {
+  color: var(--veryLightGray);
+  font-weight: var(--font-bold);
+  font-family: var(--font-primary);
+  font-size: var(--text-3xl);
+  text-transform: uppercase;
+}
+.main__card p {
+  color: var(--white);
+  line-height: 1.7;
+}
+.main__card button {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: fit-content;
+}
+.main__card button:hover {
+  width: fit-content;
+  outline: 2px solid var(--white);
+  transition: outline-color 0.3s ease;
+  color: var(
+    --white
+  ) !important; /* estilo persistente en el hover por specificidad y no repetir en cada hover*/
+}
+
+.main__card:nth-of-type(1) button {
+  color: var(--brightOrange);
+}
+.main__card:nth-of-type(1) button:hover {
+  background: var(--brightOrange);
+}
+
+.main__card:nth-of-type(2) button {
+  color: var(--darkCyan);
+}
+.main__card:nth-of-type(2) button:hover {
+  background: var(--darkCyan);
+}
+
+.main__card:nth-of-type(3) button {
+  color: var(--veryDarkCyan);
+}
+.main__card:nth-of-type(3) button:hover {
+  background: var(--veryDarkCyan);
+}
+
+img {
+  width: 4rem;
+}
+
+@media (min-width: 767px) {
+  body {
+    margin: 0rem 1rem;
+  }
+  .main {
+    flex-direction: row;
+  }
+  .main__card button {
+    margin-top: 4rem;
+  }
+}
