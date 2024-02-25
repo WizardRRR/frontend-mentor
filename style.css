@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* colors */
+  --white: hsl(0, 0%, 93%);
+  --black-light: hsl(210, 12%, 16%);
+  --gray: hsl(0, 0%, 53%);
+  --yellow: hsl(54, 85%, 55%);
+  /* font familys */
+  --primary-font: "Poppins";
+  /* font sizes */
+  --text-base: 16px;
+  --text-2xl: 24px;
+  --text-4xl: 32px;
+  --text-7xl: 48px;
+  /* font weigths */
+  --regular-font: 400;
+  --bold-font: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--black-light);
+  color: var(--white);
+  font-family: var(--primary-font);
+  font-weight: var(--regular-font);
+  font-size: var(--text-base);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+h1 {
+  font-weight: var(--bold-font);
+  font-size: var(--text-4xl);
+  text-align: center;
+}
+
+h1 span {
+  font-weight: var(--bold-font);
+  font-size: var(--text-7xl);
+  color: var(--yellow);
+}
+
+p {
+  font-weight: var(--bold-font);
+  color: var(--gray);
+  margin-top: 4rem;
+  text-align: center;
+}
