@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Profile card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  Victor Crest
-  26
-  London
+  <div class="bg-pattern-top">
+    <img src="images/bg-pattern-top.svg" alt="bg-pattern-top">
+  </div>
+  <div class="bg-pattern-bottom">
+    <img src="images/bg-pattern-bottom.svg" alt="bg-pattern-bottom">
+  </div>
+  <div class="card">
 
-  80K
-  Followers
+    <div class="card__header">
+      <img src="images/bg-pattern-card.svg" alt="card-background" class="card__header__background">
+      <img src="images/image-victor.jpg" alt="profile-victor" class="card__header__profile-img">
+    </div>
 
-  803K
-  Likes
+    <div class="card__body">
+      <div class="card__body__head">
+        <h1>Victor Crest<span>26</span></h1>
+        <span>London</span>
+      </div>
+      <hr class="line">
+      <div class="card__stats">
+        <div class="stat">
+          <h3>80K</h3>
+          <span>Followers</span>
+        </div>
+        <div class="stat">
+          <h3>803K</h3>
+          <span>Likes</span>
+        </div>
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <div class="stat">
+          <h3>1.4K</h3>
+          <span>Photos</span>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </body>
+
 </html>
