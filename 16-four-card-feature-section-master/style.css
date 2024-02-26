@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* colors */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* ### Neutral */
+  --VeryDarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+
+  /* font family */
+  --primary-font: "Poppins";
+  --secondary-font: "secondaryfont";
+  --tertiary-font: "tertiaryfont";
+
+  /* fonst sizes */
+  font-size: 16px;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+  --text-6xl: 60px;
+  --text-7xl: 72px;
+  --text-8xl: 96px;
+  --text-9xl: 128px;
+
+  /* font weigths */
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-ligth: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: var(--font-regular);
+  font-size: var(--text-base);
+  font-family: var(--primary-font);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  min-height: 100vh;
+  margin: 3rem 1.5rem;
+  background: var(--VeryLightGray);
+}
+.header {
+  text-align: center;
+}
+.header h2 {
+  color: var(--VeryDarkBlue);
+  font-weight: var(--font-extralight);
+  font-size: var(--text-2xl);
+}
+.header h1 {
+  color: var(--VeryDarkBlue);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-2xl);
+}
+.header p {
+  padding-top: 1rem;
+  color: var(--GrayishBlue);
+}
+
+/* container cards */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* card content */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  border-top: 5px solid;
+  box-shadow: 0px 10px 20px hsla(234, 12%, 34%, 0.3);
+}
+.card:nth-child(1) {
+  border-color: var(--Cyan);
+}
+.card:nth-child(2) {
+  border-color: var(--Red);
+}
+.card:nth-child(3) {
+  border-color: var(--Orange);
+}
+.card:nth-child(4) {
+  border-color: var(--Blue);
+}
+
+@media (min-width: 767px) {
+  body {
+    margin: 0 1.5rem;
+  }
+  .cards {
+    grid-template-columns: repeat(3, minmax(auto, 370px));
+  }
+  .card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+  }
+  .card:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 2;
+  }
+  .card:nth-child(3) {
+    grid-column: 2;
+    grid-row: 3 / span 2;
+  }
+  .card:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2 / span 2;
+  }
+}
+
+.card h3 {
+  font-size: var(--text-xl);
+  color: var(--VeryDarkBlue);
+  font-weight: var(--font-semibold);
+}
+.card p {
+  font-size: var(--text-sm);
+}
+.card img {
+  padding-top: 1rem;
+  display: block;
+  width: 5rem;
+  align-self: end;
+}
