@@ -3,7 +3,7 @@
     <img src="./frontend-mentor.png" /> 
     </a>
   <h3>
-    <strong>Todos los desafios de Frontend Mentor</strong>
+    <strong>Todos los desafios de Frontend Mentor by [WizardRRR](https://github.com/WizardRRR)</strong>
   </h3>
 </div>
 
