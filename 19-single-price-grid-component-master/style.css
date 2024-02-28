@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* colors */
+  /* ### Primary */
+  --Cyan: hsl(179, 62%, 43%);
+  --CyanBrightness: hsl(179, 44%, 54%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  /* ### Neutral */
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+  --white: hsl(0, 0%, 100%);
+
+  /* font family */
+  --primary-font: "Karla";
+
+  /* fonst sizes */
+  font-size: 16px;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+  --text-6xl: 60px;
+  --text-7xl: 72px;
+  --text-8xl: 96px;
+  --text-9xl: 128px;
+
+  /* font weigths */
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-ligth: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-weight: var(--font-regular);
+  font-family: var(--primary-font);
+  font-size: var(--text-base);
+}
+
+body {
+  min-height: calc(100vh - 10rem);
+  background: var(--LightGray);
+  margin: 5rem 1.5rem;
+  display: grid;
+}
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.main__card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+}
+
+.main__card:nth-child(1) {
+  gap: 1.5rem;
+  background: var(--white);
+
+  & h1 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--Cyan);
+  }
+  & h2 {
+    font-weight: var(--font-bold);
+    color: var(--BrightYellow);
+  }
+
+  & p {
+    color: var(--GrayishBlue);
+    line-height: 1.5;
+  }
+}
+
+.main__card:nth-child(2) {
+  background: var(--Cyan);
+  gap: 1.5rem;
+  color: var(--white);
+
+  & h3 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+  }
+
+  & p:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.5rem;
+
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    & span {
+      color: var(--LightGray);
+    }
+  }
+
+  & button {
+    color: var(--white);
+    border-radius: 0.3rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 1rem;
+    background: var(--BrightYellow);
+  }
+}
+
+.main__card:nth-child(3) {
+  background: var(--CyanBrightness);
+  gap: 1.5rem;
+  color: var(--white);
+
+  & h3 {
+    font-weight: var(--font-bold);
+    font-size: var(--text-xl);
+  }
+  & p {
+    padding-right: 5rem;
+    line-height: 1.4;
+  }
+}
+
+@media (min-width: 767px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+    max-width: 720px;
+    justify-self: center;
+    align-self: center;
+  }
+  .main__card {
+    padding: 2.5rem;
+  }
+  .main__card:nth-child(1) {
+    grid-column: span 2;
+  }
+  .main__card:nth-child(2) {
+    justify-content: space-between;
+  }
+}
