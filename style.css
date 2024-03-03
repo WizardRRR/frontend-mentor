@@ -1,31 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Libre+Franklin:ital@0;1&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   /* colors */
   --white: hsl(0, 0%, 93%);
+  --white-opacity: hsla(0, 0%, 93%, 0.8);
   --black-light: hsl(210, 12%, 16%);
   --gray: hsl(0, 0%, 53%);
   --yellow: hsl(54, 85%, 55%);
-  /* font familys */
+  /* font family */
   --primary-font: "Poppins";
-  /* font sizes */
+  --secondary-font: "secondaryfont";
+  --tertiary-font: "tertiaryfont";
+
+  /* fonst sizes */
+  font-size: 16px;
+  --text-xs: 12px;
+  --text-sm: 14px;
   --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
   --text-2xl: 24px;
-  --text-4xl: 32px;
-  --text-7xl: 48px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+  --text-6xl: 60px;
+  --text-7xl: 72px;
+  --text-8xl: 96px;
+  --text-9xl: 128px;
+
   /* font weigths */
-  --regular-font: 400;
-  --bold-font: 700;
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-ligth: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
 }
 
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   background: var(--black-light);
   color: var(--white);
+  font-weight: var(--font-regular);
   font-family: var(--primary-font);
-  font-weight: var(--regular-font);
   font-size: var(--text-base);
 }
 
@@ -36,21 +58,69 @@ body {
   align-items: center;
 }
 
-h1 {
-  font-weight: var(--bold-font);
-  font-size: var(--text-4xl);
-  text-align: center;
+/* styles for page layout */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3rem 0rem;
+
+  & h1 {
+    font-weight: var(--font-bold);
+    font-size: var(--text-2xl);
+    text-align: center;
+    & span {
+      font-weight: var(--font-bold);
+      font-size: var(--text-5xl);
+      color: var(--yellow);
+    }
+  }
+  & p {
+    font-size: var(--text-lg);
+    color: var(--white-opacity);
+    text-align: center;
+  }
 }
 
-h1 span {
-  font-weight: var(--bold-font);
-  font-size: var(--text-7xl);
-  color: var(--yellow);
-}
+/* grid styles */
+.main__projects {
+  align-self: center;
+  display: grid;
+  padding: 2rem;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  width: min(1200px, 100%);
 
-p {
-  font-weight: var(--bold-font);
-  color: var(--gray);
-  margin-top: 4rem;
-  text-align: center;
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+    & a {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      text-align: center;
+      text-wrap: pretty;
+      text-decoration: none;
+      align-self: center;
+      color: var(--yellow);
+      font-size: var(--text-xl);
+      font-weight: var(--font-semibold);
+
+      & img {
+        width: 100%;
+        border-radius: 0.5rem;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
