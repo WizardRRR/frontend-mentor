@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  /* primary */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  /* neutral */
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--very-dark-blue-main);
+  display: grid;
+  min-height: 100dvh;
+  place-items: center;
+}
+
+.card {
+  width: 300px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--very-dark-blue-card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card__img-container {
+  position: relative;
+  width: 100%;
+  display: block;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card__img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.overlay {
+  opacity: 0;
+  position: absolute;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  inset: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.card__img-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay img {
+  width: 40px;
+  height: 40px;
+}
+
+.card h1 {
+  color: var(--white);
+}
+
+.card h1:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.card p {
+  color: var(--soft-blue);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.card__meta-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -10px;
+}
+
+.card__price {
+  font-size: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--cyan);
+}
+
+.card__days {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 16px;
+  color: var(--soft-blue);
+}
+
+.card__creator {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--soft-blue);
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 1px solid var(--very-dark-blue-line);
+}
+
+.card__creator img {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.card__creator p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.card__creator span {
+  font-size: inherit;
+  color: var(--white);
+}
+
+.card__creator span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
